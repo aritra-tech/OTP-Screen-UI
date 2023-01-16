@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="410dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_illustration" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/illustration">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/add_your_phone_number"
+            android:textColor="#1C76E4"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="29dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/enter_your_phone_number_i_e_linked_to_your_bank_account"
+            android:textColor="#757575"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_box"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:prefixTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:prefixText="+91 "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:lines="1"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:buttonTint="@color/black"
+        android:text="I accept to Terms of user and Privacy Policy"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/email_box"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_box"
+        app:layout_constraintTop_toBottomOf="@+id/email_box" />
+
+
+    <io.github.kozemirov.readmoretextview.ReadMoreTextView
+        android:id="@+id/readMoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:color="#656363"
+        app:hidden="true"
+        app:justificationMode="1"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:limit="2"
+        app:readMoreText="Read More"
+        app:showLessText="Show Less"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="50dp"
+        app:text="I agree to Zumi's Terms of Use and Privacy Policy and authorized to communicate via SMS,Email and WatsApp.I hereby request for a copy of my Credit Information and/or aggregates on my register email id or through my Zumi account, and authorise Zumi to also provide the same to."
+        app:textSize="15" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/btn_otp"
+        android:fontFamily="@font/roboto"
+        android:text="Get OTP"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/readMoreText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/readMoreText"
+        app:layout_constraintTop_toBottomOf="@+id/readMoreText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
