@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">OTP_Screen_UI</string>
-    <string name="add_your_phone_number">Add Your Phone Number</string>
+    <string name="add_your_phone_number">Enter Mobile Number</string>
     <string name="enter_your_phone_number_i_e_linked_to_your_bank_account">Linked to your bank account</string>
 </resources>
